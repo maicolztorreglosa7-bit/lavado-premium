@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDetail App</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0f1217;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+        }
+
+        .app-container {
+            max-width: 450px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .header-app {
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #007BFF 0%, #003d80 100%);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .content { padding: 20px; }
+
+        .booking-card {
+            background: #1c222a;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: -40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .stat-item {
+            background: #252c36;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 450px;
+            background: #161b22;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #30363d;
+        }
+
+        .nav-item { color: #8b949e; text-decoration: none; font-size: 0.8rem; text-align: center; }
+        .nav-item.active { color: #58a6ff; }
+        
+        select, input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="header-app">
+        <h2>Hola, Cliente</h2>
+        <p>¿Qué servicio necesita tu auto hoy?</p>
+    </div>
+
+    <div class="content">
+        <div class="booking-card">
+            <label>Selecciona Servicio</label>
+            <select>
+                <option>Lavado Express</option>
+                <option>Detallado Completo</option>
+                <option>Pulido de Faros</option>
+            </select>
+            
+            <label style="display:block; margin-top:15px;">Fecha de Cita</label>
+            <input type="date">
+            
+            <button style="width:100%; background:#007BFF; color:white; border:none; padding:15px; border-radius:10px; margin-top:20px; font-weight:bold;">RESERVAR AHORA</button>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-item">
+                <small>Puntos</small>
+                <div style="font-size:1.5rem; color:#ffd700;">150</div>
+            </div>
+            <div class="stat-item">
+                <small>Próxima Cita</small>
+                <div style="font-size:1rem;">15 Mayo</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">Inicio</a>
+        <a href="#" class="nav-item">Mis Citas</a>
+        <a href="#" class="nav-item">Perfil</a>
+    </nav>
+</div>
+
+</body>
+</html>
